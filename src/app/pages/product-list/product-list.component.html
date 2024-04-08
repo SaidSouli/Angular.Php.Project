@@ -1,0 +1,25 @@
+<div class="container">
+    <h2>Product List</h2>
+  
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of dataSource">
+          <td>{{ product.p_name }}</td>
+          <td>{{ product.p_description }}</td>
+          <td>{{ product.p_price }}</td>
+          <td>
+            <button class="btn btn-danger" (click)="deleteProduct(product)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
